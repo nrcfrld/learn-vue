@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <h2>Vue Product App</h2>
+    </div>
+    <!-- #app adalah root elemen -->
+    <div id="app">
+        <div class="cart">
+            <p>({{cart.length}}) <br> Cart </p>
+        </div>
+        <product :premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeItem"></product>
+    </div>
+
+    <script src="https://unpkg.com/vue#2.3.2"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
